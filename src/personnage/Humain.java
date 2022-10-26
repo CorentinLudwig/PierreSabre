@@ -20,8 +20,7 @@ public class Humain {
 	}
 
 	private String prendreParole() {
-		String texte = nom + " : ";
-		return texte;
+		return nom + " : ";
 	}
 
 	public void parler(String texte) {
@@ -36,7 +35,21 @@ public class Humain {
 		parler("Mmmm, un bon verre de " + boissonFavorite + "! GLOUPS !");
 	}
 
+	public void gagnerArgent(int gain) {
+		argent += gain;
+	}
+
+	public void perdreArgent(int perte) {
+		argent -= perte;
+	}
+
 	public void acheter(String bien, int prix) {
+		if (prix <= argent) {
+			perdreArgent(prix);
+		}
+		else {
+			parler("Je n'ai plus que "+ argent +" sous en poche. Je ne peux même pas m'offrir un "+ bien +" à "+ prix+ "sous.");
+		}
 
 	}
 }
