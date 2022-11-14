@@ -22,6 +22,7 @@ public class HistoireTP4 {
 //	marco.recevoir(15);
 //	marco.boire();
 	Ronin roro = new Ronin("Roro", "shoshu", 60);
+
 	
 	roro.donner(marco);
 	

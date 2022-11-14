@@ -57,7 +57,7 @@ public class Humain {
 
 	public void faireConnaissanceAvec(Humain humain) {
 		
-		int memoirmax = 3;
+		int memoirmax = 30;
 		
 		
 		if (nbConnaissance < memoirmax) {
