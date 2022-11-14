@@ -57,24 +57,25 @@ public class Humain {
 
 	public void faireConnaissanceAvec(Humain humain) {
 		
-
-
-		if (nbConnaissance < 30) {
-			memoire[nbConnaissance + 1] = humain;
+		int memoirmax = 3;
+		
+		
+		if (nbConnaissance < memoirmax) {
+			memoire[nbConnaissance] = humain;
 			nbConnaissance++;
 		} else {
-			for(int i=0;i>30;i++) {
+			for(int i=0;i>memoirmax;i++) {
 				memoire[i]=memoire[i+1];
 			}
 			
-			memoire[30]=humain;
+			memoire[memoirmax-1]=humain;
 
 		}
 	}
 	
 	public void listerconnaissance() {
-		for(int i=0;i<=nbConnaissance;i++) {
-			parler("Je connais beaucoup de monde dont :");
+		parler("Je connais beaucoup de monde dont :");
+		for(int i=0;i<nbConnaissance;i++) {
 			System.out.println(memoire[i].getNom());
 		}
 	}

@@ -16,7 +16,20 @@ public class HistoireTP5 {
 
 		marco.direBonjour();
 		roro.direBonjour();
-		marco.
+		marco.faireConnaissanceAvec(roro);
+		System.out.println("Le marchand Marco rencontre le yakuza.");
+		marco.direBonjour();
+		yaku.direBonjour();
+		marco.faireConnaissanceAvec(yaku);
+		System.out.println("Le marchand Marco rencontre un autre marchand.");
+		marco.direBonjour();
+		chonin.direBonjour();
+		marco.faireConnaissanceAvec(chonin);
+		System.out.println("Le marchand Marco rencontre un autre marchand.");
+		marco.direBonjour();
+		kumi.direBonjour();
+		marco.faireConnaissanceAvec(kumi);
+		marco.listerconnaissance();
 
 	}
 }
