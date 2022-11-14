@@ -17,7 +17,7 @@ public class HistoireTP4 {
 //	prof.acheter("kimono", 50);
 //		
 	Commercant marco = new Commercant("Marco", 20);
-//	marco.direBonjour();
+	marco.direBonjour();
 //	marco.seFaireExtorquer();
 //	marco.recevoir(15);
 //	marco.boire();

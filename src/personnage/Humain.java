@@ -4,6 +4,8 @@ public class Humain {
 	private String nom;
 	private String boissonFavorite;
 	private int argent;
+	private int nbConnaissance = 0;
+	private Humain[] memoire = new Humain[30];
 
 	public Humain(String nom, String boissonFavorite, int argent) {
 		this.nom = nom;
@@ -46,10 +48,34 @@ public class Humain {
 	public void acheter(String bien, int prix) {
 		if (prix <= argent) {
 			perdreArgent(prix);
-		}
-		else {
-			parler("Je n'ai plus que "+ argent +" sous en poche. Je ne peux même pas m'offrir un "+ bien +" à "+ prix+ "sous.");
+		} else {
+			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peux même pas m'offrir un " + bien + " à "
+					+ prix + "sous.");
 		}
 
+	}
+
+	public void faireConnaissanceAvec(Humain humain) {
+		
+
+
+		if (nbConnaissance < 30) {
+			memoire[nbConnaissance + 1] = humain;
+			nbConnaissance++;
+		} else {
+			for(int i=0;i>30;i++) {
+				memoire[i]=memoire[i+1];
+			}
+			
+			memoire[30]=humain;
+
+		}
+	}
+	
+	public void listerconnaissance() {
+		for(int i=0;i<=nbConnaissance;i++) {
+			parler("Je connais beaucoup de monde dont :");
+			System.out.println(memoire[i].getNom());
+		}
 	}
 }
